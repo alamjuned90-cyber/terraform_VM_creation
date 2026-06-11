@@ -27,7 +27,10 @@ resource "azurerm_storage_account" "rg2" {
   account_replication_type = "LRS"
 }
 
-
+resource "azurerm_resource-group" "rg2" {
+  name = "rg-test-name"
+  location = "Central India"
+}
 
 
 
