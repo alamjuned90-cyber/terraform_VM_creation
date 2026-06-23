@@ -1,0 +1,23 @@
+name: hello wordl print!
+
+on: 
+  push:
+    branches: main
+  pull_request:
+    branch: main
+  
+  workflow_dispatch:
+
+
+  job:
+    build: 
+      run_on: ubuntu-latest
+
+      steps: 
+        - user: action/checkout@v4
+        - name: run one line script 
+          run: echo Hello, wordl
+          run: echo what is my name
+        - user: run ifconfig command
+          run: echo ifconfig
+          
